@@ -43,9 +43,16 @@ function pulsantePrev(){
   imgAttiva.removeClass('active');
   imgAttiva.prev().addClass('active');
 
+  //SCORRIMENTO PALLINI
+  var pallino = $('.nav i.active');
+  pallino.removeClass('active');
+  pallino.prev().addClass('active');
+
 
   if(imgAttiva.hasClass('first')){
     $('.images img.last').addClass('active');
+    $('.nav i.last').addClass('active');
+  }
 }
 
 
