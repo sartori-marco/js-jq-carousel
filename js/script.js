@@ -1,7 +1,10 @@
 $(document).ready(function(){
 
-  //AL CLICK RICHIAMO LA FUNZIONE
+  //AL CLICK RICHIAMO LA FUNZIONE NEX
   $('.next').click(pulsanteNext);
+
+  //AL CLICK RICHIAMO LA FUNZIONE PREV
+  $('.prev').click(pulsantePrev);
 
 });
 
@@ -30,3 +33,22 @@ function pulsanteNext(){
   }
 
 }
+
+
+// FUNZIONE PULSANTE PREV
+function pulsantePrev(){
+
+  //SCORRIMENTO IMMAGINI
+  var imgAttiva = $('.images img.active');
+  imgAttiva.removeClass('active');
+  imgAttiva.prev().addClass('active');
+
+
+  if(imgAttiva.hasClass('first')){
+    $('.images img.last').addClass('active');
+}
+
+
+
+
+//
